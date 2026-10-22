@@ -11,10 +11,10 @@ enum Tellurium__URLSet
 
 constexpr bool Console = false; // create console window (this does NOT create unreal console)
 constexpr auto URLSet = Tellurium__URLSet::Default;
-constexpr inline Tellurium::Unreal::FString Backend = L"http://127.0.0.1:3551"; // your backend url
+constexpr inline Tellurium::Unreal::FString Backend = L"https://game.nosone.dev"; // fallback when the launcher passes no -backend=
 constexpr bool bHasPushWidget = false; // fortnite: enable if you have gs closing after a couple seconds of listening. breaks closing the client (so don't build with this enabled for usage in a launcher.)
 
 // misc options, don't change unless you know what you're doing
-constexpr bool UseBackendParam = false; // for phoenix/paradise launcher
+constexpr bool UseBackendParam = true; // NOSONE: the launcher and the game server host pass -backend=<url> as the last argument
 constexpr bool ManualMapping = false; // if you're using EAC & a manual mapper, then enable this for the dll to work
 constexpr bool FixMemLeak = true; // memory leak fix
